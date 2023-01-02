@@ -1,0 +1,60 @@
+Схема БД состоит из четырех таблиц:
+Product(maker, model, type)
+PC(code, model, speed, ram, hd, cd, price)
+Laptop(code, model, speed, ram, hd, price, screen)
+Printer(code, model, color, type, price)
+
+Tasks:
+
+1. Найдите номер модели, скорость и размер жесткого диска 
+   для всех ПК стоимостью менее 500 дол. 
+   Вывести: model, speed и hd.
+
+Простой оператор SELECT
+
+Запрос:
+
+        SELECT model, speed, hd
+        FROM PC
+        WHERE price<500
+
+2. Найдите производителей принтеров. Вывести: maker.
+
+Простой оператор SELECT
+
+Запрос:
+
+        SELECT DISTINCT maker
+        FROM Product
+        WHERE type =  'Printer'
+
+3. Найдите номер модели, объем памяти и размеры экранов ПК-блокнотов, 
+   цена которых превышает 1000 дол.
+
+Простой оператор SELECT
+
+Запрос:
+
+        SELECT model, ram, screen
+        FROM laptop
+        WHERE price > 1000
+
+4. Найдите все записи таблицы Printer для цветных принтеров.
+
+Простой оператор SELECT
+
+Запрос:
+
+        SELECT *
+        FROM printer
+        WHERE color = 'y'
+
+5. Найдите номер модели, скорость и размер жесткого диска ПК, 
+   имеющих 12x или 24x CD и цену менее 600 дол.
+        
+Простой оператор SELECT
+Предикаты 
+
+        SELECT model, speed, hd
+        FROM pc
+        WHERE (cd='12x' or cd='24x') and price<600
