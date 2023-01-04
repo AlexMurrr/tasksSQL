@@ -83,3 +83,21 @@ Tasks:
         SELECT model, price
         FROM printer
         WHERE printer.price = (select max(price) from printer)
+
+11. Найдите среднюю скорость ПК.
+
+Получение итоговых значений
+
+        Select avg(speed)
+        from pc
+
+12. Найдите среднюю скорость ПК-блокнотов, цена которых превышает 1000 дол.
+
+Получение итоговых значений
+
+        select avg(speed)
+        from 
+        laptop
+        where 
+        price>1000
+
