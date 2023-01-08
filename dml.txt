@@ -1,0 +1,29 @@
+Схема БД состоит из четырех таблиц:
+Product(maker, model, type)
+PC(code, model, speed, ram, hd, cd, price)
+Laptop(code, model, speed, ram, hd, price, screen)
+Printer(code, model, color, type, price)
+
+1. Добавить в таблицу PC следующую модель:
+        code: 20
+        model: 2111
+        speed: 950
+        ram: 512
+        hd: 60
+        cd: 52x
+        price: 1100
+
+Оператор INSERT
+
+    INSERT INTO PC (code, model, speed, ram, hd, cd, price)
+    values (20, 2111, 950, 512, 60, '52x', 1100.0);
+
+2. Добавить в таблицу Product следующие продукты производителя Z:
+   принтер модели 4003, ПК модели 4001 и блокнот модели 4002
+
+Оператор INSERT
+
+       INSERT INTO Product (maker, model, type)
+       VALUES ('z', 4003, 'printer'),
+       ('z', 4001, 'pc'),
+       ('z', 4002, 'laptop')
