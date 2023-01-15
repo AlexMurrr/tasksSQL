@@ -101,3 +101,13 @@ Tasks:
         where 
         price>1000
 
+13. Найдите среднюю скорость ПК, выпущенных производителем A.
+
+Получение итоговых значений
+Явные операции соединения
+
+        SELECT AVG(speed)
+        FROM PC JOIN PRODUCT
+        ON
+        PC.model = PRODUCT.model
+        WHERE PRODUCT.maker = 'A'
