@@ -66,3 +66,16 @@ Printer(code, model, color, type, price)
     ВУДУЕУ FROM PC
     WHERE hd = (SELECT MIN(hd) FROM PC) OR
     ram = (SELECT MIN(ram) FROM PC)
+
+6. Удалить все блокноты, выпускаемые производителями, 
+   которые не выпускают принтеры.
+
+Оператор DELETE
+
+    DELETE FROM laptop
+    WHERE model IN (SELECT  model
+    FROM product
+    WHERE maker NOT IN
+    (SELECT DISTINCT maker
+    FROM product
+    WHERE type IN ('printer')))
