@@ -79,3 +79,12 @@ Printer(code, model, color, type, price)
     (SELECT DISTINCT maker
     FROM product
     WHERE type IN ('printer')))
+
+7. Производство принтеров производитель A передал производителю Z. 
+   Выполнить соответствующее изменение.    
+    
+Оператор UPDATE
+
+    UPDATE Product
+    SET maker = 'Z'
+    WHERE maker = 'A' and type = 'printer' 
