@@ -28,3 +28,15 @@ Outcomes (ship, battle, result)
     DELETE FROM Ships 
     WHERE name in 
     (SELECT Ship FROM Outcomes WHERE result = 'sunk')
+
+9. Измените данные в таблице Classes так, чтобы калибры орудий измерялись в
+   сантиметрах (1 дюйм=2,5см), а водоизмещение в метрических тоннах (1
+   метрическая тонна = 1,1 тонны). Водоизмещение вычислить с точностью до
+   целых.
+
+ Оператор UPDATE
+ Функция ROUND
+
+   UPDATE Classes
+   SET bore = bore*2.5, 
+   displacement = ROUND(displacement/1.1,0)

@@ -88,3 +88,5 @@ Printer(code, model, color, type, price)
     UPDATE Product
     SET maker = 'Z'
     WHERE maker = 'A' and type = 'printer' 
+
+8.     
