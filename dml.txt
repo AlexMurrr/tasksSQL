@@ -89,4 +89,4 @@ Printer(code, model, color, type, price)
     SET maker = 'Z'
     WHERE maker = 'A' and type = 'printer' 
 
-8.     
+     
